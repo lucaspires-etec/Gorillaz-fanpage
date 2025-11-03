@@ -1,0 +1,64 @@
+/* Estilos exclusivos da página Integrantes */
+
+.integrantes-content h1 {
+    text-align: center;
+    color: #7cae5e;
+    margin-bottom: 30px;
+}
+
+/* Grid de cards */
+.cards-grid {
+    display: grid; /* Usa grid layout, faz com que os cards se organizem em colunas */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Colunas responsivas */
+    gap: 25px;
+}
+
+/* Card dos integrantes */
+.card {
+    background: linear-gradient(135deg, #1c1c1c, #2d0f0f);
+    border-radius: 15px;
+    overflow: hidden; /* Garante que o conteúdo não vaze dos cantos arredondados */
+    box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-8px); /* Move o card para cima ao passar o mouse */
+    box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.6);
+}
+
+/* Imagem do integrante */
+.integrante-img {
+    width: 100%;
+    height: 260px;          /* altura fixa p/ padronizar */
+    object-fit: cover;      /* cobre toda a caixa */
+    object-position: center; /* centraliza o foco da imagem */
+    border-bottom: 1px solid rgba(255,255,255,0.1); 
+}
+
+/* Conteúdo do card */
+.card-content {
+    padding: 20px;
+    }
+
+.card-content h2 {
+    color: #59b326;
+    margin-bottom: 5px;
+    font-size: 1.4rem;
+    }
+
+.card-content h3 {
+    color: #b8d4f0;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    font-style: italic;
+    }
+
+.card-content p {
+    color: #e0e7ff;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    }

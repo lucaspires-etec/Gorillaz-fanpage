@@ -1,0 +1,392 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte local e Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap');
+
+@font-face {
+    font-family: 'Gorillaz_1';
+    src: url('arquivo-fontes/gorillaz_1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Body */
+body{
+    background: linear-gradient(135deg, #142320, #123227, #293531); /* Fundo com gradiente verde escuro */
+    color: #ffffff;
+    line-height: 1.6; 
+    font-family: 'Rubik', sans-serif;
+}
+
+/* Container fixo para header + navbar */
+.top-bar {
+    position: sticky;   /* Fixa no topo durante o scroll */
+    top: 0;
+    z-index: 1000; /* Garante que fica acima de outros elementos */
+    display: flex; 
+    flex-direction: column; /* header em cima, navbar embaixo */
+    width: 100%;
+}
+
+/* Header */
+header{
+    background: linear-gradient(90deg, #142320, #0d6232);
+    display: flex;
+    padding: 0 2%;
+    height: 80px;
+    box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.3);
+}
+
+/* Logo */
+header a{
+    display: block;
+    width: 15%;
+}
+
+.logo{
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; /* Transição suave para o efeito de zoom */
+}
+
+.logo:hover{
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Navbar */
+.navbar{
+    background: linear-gradient(90deg, #330303, #7b1404);
+    display: flex;
+    justify-content: flex-end; /* links à direita */
+    padding: 1% 2%;
+    box-shadow: 0 0.5vh 1vh rgba(113, 113, 113, 0.3);
+}
+
+/* Lista de links */
+.nav-list{
+    display: flex; 
+    list-style: none; 
+    gap: 1vw; /* Espaçamento entre os links */
+    align-items: center; 
+    margin: 0;
+    padding: 0;
+}
+
+/* Links da navbar */
+.nav-link{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0.4vh 0.8vw;
+    border-radius: 7px;
+    transition: all 0.3s ease; /* Transição suave para hover */
+    position: relative; 
+    overflow: hidden; /* Para o efeito de underline animado */
+}
+
+.nav-link::after {
+    content: ""; /* Elemento para o underscore animado */
+    position: absolute; /* Posição absoluta dentro do link */
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.5s ease; /* Animação suave */
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Banner */
+.hero-banner {
+    position: relative; 
+    height: 50vh; /* altura proporcional à tela */
+    overflow: hidden; /* Esconde o que ultrapassa a área do banner */
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cobre toda a área do banner */
+    filter: brightness(0.7); /* Escurece a imagem para destacar o texto */
+}
+
+.hero-overlay {
+    position: absolute;
+    text-align: center;
+    z-index: 2; /* Acima da imagem */
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    opacity: 0.9;
+    font-family: 'Rubik', sans-serif;
+}
+
+.hero-title {
+    font-size: clamp(2rem, 5vw, 4.5rem); /* Tamanho responsivo */
+    font-weight: bold;
+    font-family: 'Gorillaz_1', sans-serif;
+    text-shadow: 0.2vw 0.2vw 0.5vw rgba(0, 0, 0, 0.7);
+    margin-bottom: 5vh;
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    gap: 30px;
+    margin: 40px 30px;
+    min-height: calc(100vh - 500px); /* Ajusta a altura mínima para evitar que o footer suba */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 300px;
+    flex-shrink: 0; /* Não encolhe */
+    position: sticky; /* Fixa a sidebar ao rolar */
+    top: 140px; /* altura do header + navbar */
+    align-self: flex-start; /* Alinha ao topo da seção */
+}
+
+.sidebar-content{
+    background: linear-gradient(135deg, #250602, #6d1103);
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid #7b1404;
+    box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.3);
+}
+
+.sidebar-content h3, .sidebar-content h4 {
+    color: #58843e;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.sidebar-list{
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.sidebar-list li{
+    margin-bottom: 8px;
+}
+
+.sidebar-link {
+    color: #b8d4f0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+.sidebar-link:hover{
+    color: #59b326;
+    background: rgba(85, 255, 131, 0.1);
+    transform: translateX(5px); /* Leve movimento à direita */
+}
+
+.links-rapidos ul{
+    list-style: none;
+}
+
+.links-rapidos li{
+    margin-bottom: 8px;
+}
+
+/* Conteúdo Principal - Main*/
+.main-content{
+    flex: 1;
+    background: linear-gradient(135deg, #280e0c, #821c0d);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid #821c0d;
+    box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.3);
+    font-family: 'Rubik', sans-serif;
+    text-align: justify;
+}
+
+.intro-section h1 {
+    color: #4f7738;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+}
+
+.intro-section p {
+    text-align: justify;
+    margin-bottom: 15px;
+    color: #e0e7ff;
+    font-size: 16px;
+}
+
+/* Conteúdo em Destaque */
+.featured-content {
+    margin-top: 40px;
+}
+
+.featured-content h2 {
+    color: #4f7738;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.8rem;
+}
+
+.music-player-section{
+    background: #142320;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    border: 1px solid #0d6232;
+}
+
+.video-description{
+    text-align: center;
+    font-style: italic;
+    color: #b8f0c2;
+}
+
+/* Testemunhos dos Fãs */
+.testemunha-fans{
+    margin-top: 40px;
+}
+
+.grid-testemunhas{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Layout responsivo, ajusta o número de colunas conforme o espaço. - repeat: repete as colunas, auto-fit: ajusta automaticamente, minmax: define o tamanho mínimo e máximo, 1fr: ocupa o espaço restante */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.testemunhas{
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid #0d6232;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.fan-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #0d6232;
+}
+
+.testemunhas-conteudo h3{
+    color: #7cae5e;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.testemunhas-conteudo p{
+    color: #cfe2f6;
+    font-style: italic;
+    font-size: 14px;
+}
+
+/* Fase 8 - Seção */
+.fase8-section {
+    margin-top: 40px;
+}
+
+.fase8-section h2 {
+    color: #4f7738;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.fase8-content {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
+    gap: 20px;
+    align-items: center;
+    background: #142320;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #0d6232;
+}
+
+.fase8-img {
+    flex: 1 1 300px; /* Flexível, mas com largura mínima de 300px */
+    max-width: 400px;
+    border-radius: 15px;
+    object-fit: cover; /* Cobre a área da imagem */
+}
+
+.fase8-text {
+    flex: 2 1 400px;
+    color: #e0e7ff;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer{
+    background: linear-gradient(90deg, #3e1513, #821c0d, #3e1513);
+    margin-top: 50px;
+}
+
+.footer-content{
+    padding: 30px;
+    text-align: center;
+}
+
+.footer-content h2{
+    color: #4f7738;
+    margin-bottom: 10px;
+}
+
+.footer-info hr{
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #4f7738, transparent);
+    margin: 20px 0;
+}
+
+.footer-links{
+    margin-top: 20px;
+}
+
+.footer-links h4{
+    color: #7cae5e;
+    margin-bottom: 10px;
+}
+
+.footer-links ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-links a{
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Transição suave */
+}
+
+.footer-links a:hover{
+    color: #7cae5e;
+}

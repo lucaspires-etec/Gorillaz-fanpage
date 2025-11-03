@@ -1,0 +1,21 @@
+/* Estilos exclusivos da página Vídeos */
+
+.video-box {
+    margin-bottom: 40px;
+    background: #142320;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #0d6232;
+    box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.3);
+}
+
+.video-box h2 {
+    color: #7cae5e;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+iframe {
+    border-radius: 10px;
+    box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.3);
+}

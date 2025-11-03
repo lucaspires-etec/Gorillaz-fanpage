@@ -1,0 +1,48 @@
+/* Estilos exclusivos da página História */
+
+.historia-content h1 {
+    text-align: center;
+    color: #7cae5e;
+    margin-bottom: 30px;
+}
+
+.fase {
+    display: flex;                     /* imagem + texto lado a lado */
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-left: 5px solid #7cae5e;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+}
+
+/* título e parágrafos dentro da fase */
+.fase h2 {
+    color: #59b326;
+    margin-bottom: 10px;
+}
+
+.fase p {
+    color: #e0e7ff;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* imagem dentro da fase */
+.fase img {
+    display: block;
+    max-width: 250px;
+    border-radius: 12px;
+    flex-shrink: 0; /* impede que a imagem seja esmagada */
+}
+
+/* destaque para fase 8 */
+#fase8 {
+    border-left-color: #ffd700; 
+    background: rgba(50, 50, 50, 0.3);
+}
+
+#fase8 h2 {
+    color: #ffda6c;
+}

@@ -1,0 +1,64 @@
+/* Formulário Fan Clube */
+
+/* Estilo do formulário de inscrição no fã clube */
+.fan-form {
+    display: flex;
+    flex-direction: column; /* Alinha os itens em coluna */
+    gap: 15px;
+    background: #142320;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #0d6232;
+    box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.3);
+}
+
+.fan-form label {
+    font-weight: bold;
+    color: #7cae5e;
+}
+
+.fan-form input,
+.fan-form select,
+.fan-form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: #142320;
+    border: 1px solid #0d6232;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.fan-form input:focus, /* Aplica o foco a todos os inputs, selects e textareas */
+.fan-form select:focus,
+.fan-form textarea:focus {
+    border: 2px solid #59b326;
+}
+
+/* Estilo do botão de envio */
+.btn-submit {
+    background: linear-gradient(90deg, #1DB954, #14833b); /* verde Spotify */
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.3s ease; /* Animação suave */
+}
+
+.btn-submit:hover {
+    transform: translateY(-3px); /* Move o botão para cima ao passar o mouse */
+    box-shadow: 0 0 15px rgba(29, 185, 84, 0.8); /* Adiciona um brilho ao botão */
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none; /* Remove os botões de incremento/decremento no Chrome/Safari */
+    
+}
+input[type=number] { 
+    -moz-appearance: textfield; /* Remove os botões de incremento/decremento no Firefox */
+    appearance: textfield; /* Remove os botões de incremento/decremento em outros navegadores */
+
+}
